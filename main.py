@@ -1,16 +1,18 @@
-# This is a sample Python script.
+from Matrix import Matrix
+from Sheet_original import Sheet
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+sheet_1 = Sheet(10,30)
+sheet_1.updateValue(0,0,"7")
+sheet_1.updateValue(1,0,"5")
+sheet_1.updateValue(0,1,"=(3+4)*2")
+sheet_1.updateValue(0,2,"=A1+B1")
+sheet_1.updateValue(1,2,"=A1-B1")
+sheet_1.updateValue(2,2,"=A1*B1")
+sheet_1.updateValue(0,3,"=(A1+8)/A2")
+
+sheet_1.updateValue(1,3, "=max(A1,A2)")
+sheet_1.updateValue(1,0,'=AA1')
+#def fun(*args, **kargs):
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(sheet_1)
